@@ -6,7 +6,7 @@ set number
 set wrap
 set linebreak
 set nolist
-set showbreak=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+set showbreak=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
 
 "FileType support
 set filetype=on
