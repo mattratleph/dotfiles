@@ -226,4 +226,4 @@ settings = {
   "fe-common/core" = { theme = "miromiro"; };
 };
 
-hilights = ( { text = "nick"; nick = "yes"; word = "yes"; } );
+hilights = ( { text = "Matt"; nick = "yes"; word = "yes"; } );

@@ -17,7 +17,8 @@ endif
 
 "Display
 syntax on
-colorscheme ir_black
+set background=dark
+colorscheme solarized
 set cursorline
 set laststatus=2
 set number
@@ -34,6 +35,9 @@ set showbreak=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
 
 "FileType support
 filetype plugin indent on
+
+"Ruby compiler support
+compiler ruby
 
 "Indentation
 set tabstop=2
