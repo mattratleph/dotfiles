@@ -27,8 +27,8 @@ set-option -g status-fg black
 set-window-option -g window-status-current-bg white
 set-window-option -g window-status-current-fg black
 
-# status bar settings
-set status-interval 1
-
 # right side of status bar
 set -g status-right "#(memusage.sh) | #(/usr/local/bin/battery Discharging; /usr/local/bin/battery Charging) | %e %B %I:%M %p"
+
+# status bar settings
+set status-interval 1
