@@ -1,6 +1,9 @@
 "Make vim more useful
 set nocompatible
 
+"Call pathogen
+call pathogen#infect()
+
 "Optimize for fast terminal connections
 set ttyfast
 
