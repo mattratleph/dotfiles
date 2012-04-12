@@ -9,8 +9,8 @@ servers = (
   {
     address = "irc.2600.net";
     chatnet = "2600";
-    port = "6667";
-    use_ssl = "no";
+    port = "6697";
+    use_ssl = "yes";
     ssl_verify = "no";
   },
   {
