@@ -18,9 +18,11 @@ libgpg-error
 libtasn1
 libxml2
 libxslt
+lua
 lynx
 markdown
 mongodb
+nmap
 node
 ossp-uuid
 pkg-config
@@ -31,6 +33,8 @@ ruby-build
 sqlite
 szip
 tmux
+tor
+torsocks
 tree
 wget
 xz
