@@ -227,3 +227,4 @@ settings = {
 };
 
 hilights = ( { text = "Matt"; nick = "yes"; word = "yes"; } );
+ignores = ( { level = "CTCPS"; } );
