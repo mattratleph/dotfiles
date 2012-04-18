@@ -1,7 +1,13 @@
+# Dotfiles
+
 This is my personal dotfiles repository. Below are my currently installed brews and gems.
 
-# Brews
+## Brews
+autoconf
+automake
 bitlbee
+c-ares
+ettercap
 gdbm
 gettext
 git
@@ -15,16 +21,20 @@ libevent
 libffi
 libgcrypt
 libgpg-error
+libnet
 libtasn1
+libtool
 libxml2
 libxslt
 lua
 lynx
 markdown
 mongodb
+nginx
 nmap
 node
 ossp-uuid
+pcre
 pkg-config
 python
 rbenv
@@ -37,9 +47,10 @@ tor
 torsocks
 tree
 wget
+wireshark
 xz
 
-# Gems
+## Gems
 actionmailer (3.2.3, 3.2.2)
 actionpack (3.2.3, 3.2.2)
 activemodel (3.2.3, 3.2.2)
@@ -69,7 +80,7 @@ eventmachine (0.12.10)
 execjs (1.3.0)
 fast-stemmer (1.0.1, 1.0.0)
 ffi (1.0.11, 1.0.9)
-foreman (0.41.0)
+foreman (0.42.0, 0.41.0)
 fssm (0.2.9, 0.2.8.1, 0.2.7)
 haml (3.1.4, 3.1.2)
 happymapper (0.4.0)
@@ -92,7 +103,7 @@ mail (2.4.4)
 maruku (0.6.0)
 mime-types (1.18, 1.17.2)
 minitest (2.12.1, 2.12.0, 2.11.4, 2.11.3, 2.5.1)
-multi_json (1.3.0, 1.2.0, 1.1.0)
+multi_json (1.3.2, 1.3.1, 1.3.0, 1.2.0, 1.1.0)
 netrc (0.7.1)
 nokogiri (1.5.2)
 notify (0.3.0)
@@ -118,7 +129,7 @@ RedCloth (4.2.9, 4.2.8)
 rest-client (1.6.7)
 rubygems-update (1.8.22, 1.8.21)
 rubypants (0.2.0)
-rubypython (0.5.3, 0.5.1)
+rubypython (0.6.0, 0.5.3, 0.5.1)
 rubyzip (0.9.7, 0.9.6.1)
 sass (3.1.15, 3.1.5)
 sass-rails (3.2.5)
@@ -127,7 +138,7 @@ simple_oauth (0.1.5)
 sinatra (1.3.2, 1.2.6)
 slop (3.0.4, 2.4.4)
 sprockets (2.4.0, 2.3.1, 2.1.2)
-sqlite3 (1.3.5)
+sqlite3 (1.3.6, 1.3.5)
 stringex (1.3.2, 1.3.0)
 syntax (1.0.0)
 thin (1.3.1)
