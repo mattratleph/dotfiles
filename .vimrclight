@@ -31,10 +31,10 @@ set showmatch
 set nostartofline
 
 "Word wrap
-set wrap
-set linebreak
-set nolist
-set showbreak=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+set nowrap
+autocmd BufNewFile,BufRead *.md set wrap
+autocmd BufNewFile,BufRead *.md set linebreak
+autocmd BufNewFile,BufRead *.md set nolist
 
 "FileType support
 filetype plugin indent on

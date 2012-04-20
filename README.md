@@ -7,6 +7,8 @@ autoconf
 automake
 bitlbee
 c-ares
+couchdb
+erlang
 ettercap
 gdbm
 gettext
@@ -15,7 +17,9 @@ git-flow
 glib
 gnutls
 hdf5
+help2man
 hub
+icu4c
 irssi
 libevent
 libffi
@@ -33,13 +37,16 @@ mongodb
 nginx
 nmap
 node
+nspr
 ossp-uuid
 pcre
 pkg-config
 python
 rbenv
 readline
+redis
 ruby-build
+spidermonkey
 sqlite
 szip
 tmux
@@ -127,7 +134,7 @@ rdiscount (1.6.8)
 rdoc (3.12, 3.9.4)
 RedCloth (4.2.9, 4.2.8)
 rest-client (1.6.7)
-rubygems-update (1.8.22, 1.8.21)
+rubygems-update (1.8.23, 1.8.22, 1.8.21)
 rubypants (0.2.0)
 rubypython (0.6.0, 0.5.3, 0.5.1)
 rubyzip (0.9.7, 0.9.6.1)
