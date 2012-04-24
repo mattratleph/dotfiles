@@ -26,7 +26,6 @@ libevent
 libffi
 libgcrypt
 libgpg-error
-libiconv
 libnet
 libtasn1
 libtool
@@ -99,7 +98,7 @@ eventmachine (0.12.10)
 execjs (1.3.0)
 fast-stemmer (1.0.1, 1.0.0)
 ffi (1.0.11, 1.0.9)
-foreman (0.43.0, 0.42.0, 0.41.0)
+foreman (0.44.0, 0.43.0, 0.42.0, 0.41.0)
 fssm (0.2.9, 0.2.8.1, 0.2.7)
 github-markup (0.7.2)
 gollum (1.3.1)
@@ -176,12 +175,12 @@ sass-rails (3.2.5)
 selenium-webdriver (2.21.2, 2.4.0)
 sheet (0.1.5, 0.1.4)
 shotgun (0.9)
-simple_oauth (0.1.5)
+simple_oauth (0.1.7, 0.1.5)
 sinatra (1.3.2, 1.2.6)
-slop (3.1.0, 3.0.4, 2.4.4)
+slop (3.1.1, 3.1.0, 3.0.4, 2.4.4)
 sprockets (2.4.0, 2.3.1, 2.1.2)
 sqlite3 (1.3.6, 1.3.5)
-stringex (1.3.2, 1.3.0)
+stringex (1.3.3, 1.3.2, 1.3.0)
 syntax (1.0.0)
 thin (1.3.1)
 thor (0.14.6)
