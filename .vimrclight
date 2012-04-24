@@ -26,6 +26,7 @@ set cursorline
 set laststatus=2
 set number
 set showmatch
+set ruler
 
 "Don't reset cursor to start of line when moving around.
 set nostartofline
