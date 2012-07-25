@@ -4,6 +4,9 @@ set nocompatible
 "Call pathogen
 call pathogen#infect()
 
+"Powerline
+let g:Powerline_symbols = "fancy"
+
 "Optimize for fast terminal connections
 set ttyfast
 

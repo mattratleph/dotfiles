@@ -4,9 +4,15 @@
 project_name: Default
 project_root: ~/
 tabs:
-  - dev:
+  - main:
       layout: 4fe3,181x55,0,0{90x55,0,0[90x13,0,0,90x41,0,14],90x55,91,0}
       panes:
         - earthquake
         - # empty zsh
         - vim
+  - dev:
+      layout: eb13,181x55,0,0[181x41,0,0,181x13,0,42{90x13,0,42,90x13,91,42}]
+      panes:
+        - vim -O2
+        - # empty zsh
+        - # empty zsh
