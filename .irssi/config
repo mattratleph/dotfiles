@@ -1,12 +1,5 @@
 servers = (
   {
-    address = "localhost";
-    chatnet = "HipChat";
-    port = "6667";
-    use_ssl = "no";
-    ssl_verify = "no";
-  },
-  {
     address = "irc.2600.net";
     chatnet = "2600";
     port = "6667";
@@ -23,12 +16,6 @@ servers = (
 );
 
 chatnets = {
-  HipChat = {
-    type = "IRC";
-    nick = "Matt";
-    username = "Matt";
-    realname = "Matt";
-  };
   2600 = { 
     type = "IRC";
     nick = "_sei";
