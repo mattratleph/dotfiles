@@ -5,6 +5,7 @@ set nocompatible
 call pathogen#infect()
 
 "Powerline
+let g:Powerline_colorscheme="solarizedDarkLC"
 let g:Powerline_symbols = "fancy"
 
 "Optimize for fast terminal connections
