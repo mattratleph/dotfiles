@@ -9,10 +9,14 @@ plugins=(brew bundler gem github git-flow heroku)
 # zsh settings
 source $ZSH/oh-my-zsh.sh
 source ~/.localrc
-eval "$(hub alias -s)"
-export NODE_PATH=/usr/local/lib/node_modules
 export EDITOR="vim"
-export PATH=~/.rbenv/bin:~/.rbenv/shims:.bundle/binstubs:/usr/local/share/python:/usr/local/bin:/bin:/usr/sbin:/usr/bin:/sbin:/usr/X11/bin:/usr/local/sbin:/usr/local/git/bin:/usr/local/share/npm/bin
+export PATH="/usr/local/bin:/bin:/usr/sbin:/usr/bin:/sbin:/usr/X11/bin:/usr/local/sbin"
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/usr/local/git/bin:$PATH"
+export PATH="/usr/local/share/npm/bin:$PATH"
+export PATH="/usr/local/Cellar/python/2.7.3/bin:/usr/local/share/python:$PATH"
+export PATH="/Users/mratleph/.rbenv/bin:/Users/mratleph/.rbenv/shims:.bundle/binstubs:$PATH"
+export NODE_PATH="/usr/local/lib/node_modules"
 
 # tmuxinator settings
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
@@ -86,6 +90,7 @@ alias zshc="vim ~/.zshrc" # edit zsh config in vim
 alias zsht="vim ~/.oh-my-zsh/themes/blinks.zsh-theme" # edit oh-my-zsh theme in vim
 alias installc="vim ~/Documents/Code/private/dotfiles/install.sh" # edit install.sh script in vim
 
+alias git="hub"
 alias gi="git flow init" # initializes a directory as a Git repository using flow
 alias gl="git log --decorate --graph" # show commit history of a branch
 alias glo="git log --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'" # show commit history of a branch on one line
