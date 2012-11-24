@@ -27,8 +27,10 @@ set-option -g status-fg black
 set-window-option -g window-status-current-bg white
 set-window-option -g window-status-current-fg black
 
-# right side of status bar
-set -g status-right "#(memusage.sh) | #(/usr/local/bin/battery Discharging; /usr/local/bin/battery Charging) | %e %B %I:%M %p"
-
 # status bar settings
 set status-interval 1
+set -g status-left "#[bg=colour23,fg=white] ⧉ #S #[bg=black,fg=colour23]⮀"
+set -g status-left-length 20
+set -g status-right "#[bg=black,fg=colour240]#[bg=black,fg=colour15] #(memusage) #(/usr/local/bin/battery Discharging; /usr/local/bin/battery Charging) #[bg=black,fg=colour23]⮂#[bg=colour23,fg=white] %e %B %I:%M %p"
+set-window-option -g window-status-format "#[fg=colour253]#I #[fg=colour248]#W"
+set-window-option -g window-status-current-format "#[bg=colour31,fg=black]⮀#[bg=colour31] #[fg=white]#I #[fg=colour15]#W #[bg=black,fg=colour31]⮀"
