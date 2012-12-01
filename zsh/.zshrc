@@ -81,6 +81,8 @@ alias s="exec $SHELL" # reload shell
 alias show="defaults write com.apple.Finder AppleShowAllFiles TRUE && killall Finder" # show all hidden files in Finder
 alias hide="defaults write com.apple.Finder AppleShowAllFiles FALSE && killall Finder" # hide all hideen files in Finder
 
+alias iphone="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app" # open iPhone Simulator
+
 alias gitc="vim ~/.gitconfig" # edit git config in vim
 alias giti="vim ~/.gitignore_global" # edit global git ignore in vim
 alias vimc="vim ~/.vimrc" # edit vim config in vim
@@ -91,7 +93,7 @@ alias zsht="vim ~/.oh-my-zsh/themes/blinks.zsh-theme" # edit oh-my-zsh theme in 
 alias installc="vim ~/Documents/Code/private/dotfiles/install.sh" # edit install.sh script in vim
 
 alias git="hub"
-alias gi="git flow init" # initializes a directory as a Git repository using flow
+alias gi="git init" # initializes a directory as a Git repository
 alias gl="git log --decorate --graph" # show commit history of a branch
 alias glo="git log --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'" # show commit history of a branch on one line
 alias gs="git status" # view the status of your files in the working directory and staging area
@@ -107,10 +109,6 @@ alias gb="git branch --all" # list your available branches
 alias gbn="git branch --no-merged" # list branches not merged into current branch
 alias gbd="git branch -D" # delete a local branch
 alias gco="git checkout" # switch to a branch
-alias gff="git flow feature" # list your feature branch(es)
-alias gfr="git flow release" # list your release branch(es)
-alias gfh="git flow hotfix" # list your hotfix branch(es)
-alias gfs="git flow support" # list your support branch(es)
 alias gcl="git clone" # copy a git repository so you can add to it
 alias gr="git remote -v" # list your remote aliases
 alias gfo="git fetch origin" # download new branches and data from origin
