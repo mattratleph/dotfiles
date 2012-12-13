@@ -4,7 +4,7 @@ ZSH_THEME="blinks"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_AUTO_TITLE="true"
 COMPLETION_WAITING_DOTS="true"
-plugins=(brew bundler gem github git-flow heroku)
+plugins=(brew github heroku)
 
 # zsh settings
 source $ZSH/oh-my-zsh.sh
@@ -17,6 +17,9 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="/usr/local/Cellar/python/2.7.3/bin:/usr/local/share/python:$PATH"
 export PATH="/Users/mratleph/.rbenv/bin:/Users/mratleph/.rbenv/shims:.bundle/binstubs:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
+
+# hub alias
+eval "$(hub alias -s)"
 
 # tmuxinator settings
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
@@ -92,11 +95,10 @@ alias zshc="vim ~/.zshrc" # edit zsh config in vim
 alias zsht="vim ~/.oh-my-zsh/themes/blinks.zsh-theme" # edit oh-my-zsh theme in vim
 alias installc="vim ~/Documents/Code/private/dotfiles/install.sh" # edit install.sh script in vim
 
-alias git="hub"
-alias gi="git init" # initializes a directory as a Git repository
+alias gi="git init" # initializes a directory as a git repository
 alias gl="git log --decorate --graph" # show commit history of a branch
-alias glo="git log --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'" # show commit history of a branch on one line
-alias gs="git status" # view the status of your files in the working directory and staging area
+alias glo="git log --decorate --graph --oneline" # show commit history of a branch on one line
+alias gs="git status -sb" # view the status of your files in the working directory and staging area
 alias gd="git diff" # show diff of all staged or unstaged changes
 alias gt="git tag -a" # tag a point in history as important
 alias ga="git add ." # adds file contents to the staging area
@@ -111,11 +113,11 @@ alias gbd="git branch -D" # delete a local branch
 alias gco="git checkout" # switch to a branch
 alias gcl="git clone" # copy a git repository so you can add to it
 alias gr="git remote -v" # list your remote aliases
-alias gfo="git fetch origin" # download new branches and data from origin
-alias gfu="git fetch upstream" # download new branches and data from upstream
+alias gfo="git fetch origin && git remote prune origin" # download new branches and data from origin
+alias gfu="git fetch upstream && git remote prune upstream" # download new branches and data from upstream
 alias gm="git merge --no-ff" # merge into current branch
-alias gpo="git push origin $(current_branch)" # push your new data to origin
-alias gpu="git push upstream $(current_branch)" # push your new data to upstream
+alias gpo="git push -u origin $(current_branch)" # push your new data to origin
+alias gpu="git push -u upstream $(current_branch)" # push your new data to upstream
 alias gpr="git pull-request" # open a pull request for the topic branch you just pushed
 alias gbr="git browse" # open the Github link for the repo in your default browser
 
