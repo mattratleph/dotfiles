@@ -7,7 +7,7 @@ servers = (
     ssl_verify = "no";
   },
   {
-    address = "irc.freenode.net";
+    address = "chat.freenode.net";
     chatnet = "freenode";
     port = "6667";
     use_ssl = "no";
@@ -18,25 +18,29 @@ servers = (
 chatnets = {
   2600 = { 
     type = "IRC";
-    nick = "_sei";
-    username = "sei";
-    realname = "_sei";
+    nick = "mattratleph";
+    username = "mattratleph";
+    realname = "Matt Ratleph";
   };
   freenode = {
     type = "IRC";
-    nick = "_sei";
-    username = "sei";
-    realname = "_sei";
+    nick = "mattratleph";
+    username = "mattratleph";
+    realname = "Matt Ratleph";
   };
 };
 
 channels = (
   { name = "#2600"; chatnet = "2600"; autojoin = "yes"; },
-  { name = "#machomebrew"; chatnet = "freenode"; },
-  { name = "#ruby"; chatnet = "freenode"; },
-  { name = "#rubyonrails"; chatnet = "freenode"; },
   { name = "#coffeescript"; chatnet = "freenode"; },
+  { name = "#css"; chatnet = "freenode"; }
   { name = "#git"; chatnet = "freenode"; }
+  { name = "#github"; chatnet = "freenode"; }
+  { name = "#html"; chatnet = "freenode"; }
+  { name = "#javascript"; chatnet = "freenode"; }
+  { name = "#raspberrypi"; chatnet = "freenode"; }
+  { name = "#ruby"; chatnet = "freenode"; },
+  { name = "#vim"; chatnet = "freenode"; }
 );
 
 aliases = {
@@ -205,13 +209,13 @@ statusbar = {
 settings = {
   core = {
     real_name = "Matt Ratleph";
-    user_name = "Matt";
-    nick = "Matt";
+    user_name = "mattratleph";
+    nick = "mattratleph";
     timestamp_format = "%I:%M:%S";
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = { theme = "miromiro"; };
 };
 
-hilights = ( { text = "Matt"; nick = "yes"; word = "yes"; } );
+hilights = ( { text = "mattratleph"; nick = "yes"; word = "yes"; } );
 ignores = ( { level = "CTCPS"; } );

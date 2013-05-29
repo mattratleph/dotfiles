@@ -1,6 +1,6 @@
 # oh-my-zsh settings
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="blinks"
+ZSH_THEME="custom"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_AUTO_TITLE="true"
 COMPLETION_WAITING_DOTS="true"
@@ -15,8 +15,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/git/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="/usr/local/Cellar/python/2.7.3/bin:/usr/local/share/python:$PATH"
-export PATH="/Users/mratleph/.rbenv/bin:/Users/mratleph/.rbenv/shims:.bundle/binstubs:$PATH"
-export NODE_PATH="/usr/local/lib/node_modules"
+export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:.bundle/binstubs:$PATH"
 
 # hub alias
 eval "$(hub alias -s)"
@@ -45,7 +44,7 @@ function theme {
         cp ~/Documents/Code/dotfiles/irssi/theme/light ~/.irssi/miromiro.theme
         cp ~/Documents/Code/dotfiles/tmux/theme/light ~/Documents/Code/dotfiles/tmux/.tmux.conf
         tmux source-file ~/.tmux.conf
-        cp ~/Documents/Code/dotfiles/zsh/theme/light ~/.oh-my-zsh/themes/blinks.zsh-theme
+        cp ~/Documents/Code/dotfiles/zsh/theme/light ~/.oh-my-zsh/themes/custom.zsh-theme
         exec $SHELL  
         break
         ;;
@@ -55,7 +54,7 @@ function theme {
         cp ~/Documents/Code/dotfiles/irssi/theme/dark ~/.irssi/miromiro.theme
         cp ~/Documents/Code/dotfiles/tmux/theme/dark ~/Documents/Code/dotfiles/tmux/.tmux.conf
         tmux source-file ~/.tmux.conf
-        cp ~/Documents/Code/dotfiles/zsh/theme/dark ~/.oh-my-zsh/themes/blinks.zsh-theme
+        cp ~/Documents/Code/dotfiles/zsh/theme/dark ~/.oh-my-zsh/themes/custom.zsh-theme
         exec $SHELL
         break
         ;;
@@ -77,7 +76,8 @@ alias ~="cd ~" # go to home folder
 alias code="cd ~/Documents/Code" # go to code folder
 alias sites="cd ~/Sites" # go to sites folder
 
-alias la="ls -A" # list all files and folders
+alias ls="ls -AG" # list all files and folders
+alias lsl="ls -AGl" # list all files and folders with permissions
 alias c="clear" # clear the display
 alias s="exec $SHELL" # reload shell
 
@@ -85,6 +85,7 @@ alias show="defaults write com.apple.Finder AppleShowAllFiles TRUE && killall Fi
 alias hide="defaults write com.apple.Finder AppleShowAllFiles FALSE && killall Finder" # hide all hideen files in Finder
 
 alias iphone="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app" # open iPhone Simulator
+alias android="~/Documents/Code/android/sdk/tools/emulator -avd Nexus-7-4.2 &"
 
 alias gitc="vim ~/.gitconfig" # edit git config in vim
 alias giti="vim ~/.gitignore_global" # edit global git ignore in vim
@@ -98,10 +99,11 @@ alias installc="vim ~/Documents/Code/private/dotfiles/install.sh" # edit install
 alias gi="git init" # initializes a directory as a git repository
 alias gl="git log --decorate --graph" # show commit history of a branch
 alias glo="git log --decorate --graph --oneline" # show commit history of a branch on one line
+alias gls="git log --decorate --graph --since '1 day ago' --no-merges --author 'Matt Ratleph'" # show commit history of a branch for yesterday
 alias gs="git status -sb" # view the status of your files in the working directory and staging area
 alias gd="git diff" # show diff of all staged or unstaged changes
 alias gt="git tag -a" # tag a point in history as important
-alias ga="git add ." # adds file contents to the staging area
+alias ga="git add" # adds file contents to the staging area
 alias grm="git rm" # remove files from the staging area
 alias gc="git commit" # records a snapshot of the staging area
 alias gca="git commit -a" # automatically stage all tracked, modified files before the commit
@@ -116,8 +118,10 @@ alias gr="git remote -v" # list your remote aliases
 alias gfo="git fetch origin && git remote prune origin" # download new branches and data from origin
 alias gfu="git fetch upstream && git remote prune upstream" # download new branches and data from upstream
 alias gm="git merge --no-ff" # merge into current branch
-alias gpo="git push -u origin $(current_branch)" # push your new data to origin
-alias gpu="git push -u upstream $(current_branch)" # push your new data to upstream
+alias gpo="git push origin $(current_branch)" # push your new data to origin
+alias gpso="git push --set-upstream origin $(current_branch)" # push your new data to origin
+alias gpu="git push upstream $(current_branch)" # push your new data to upstream
+alias gpsu="git push --set-upstream upstream $(current_branch)" # push your new data to upstream
 alias gpr="git pull-request" # open a pull request for the topic branch you just pushed
 alias gbr="git browse" # open the Github link for the repo in your default browser
 
