@@ -32,7 +32,7 @@ set number
 set showmatch
 set ruler
 
-"Don't reset cursor to start of line when moving around.
+"Don't reset cursor to start of line when moving around
 set nostartofline
 
 "Word wrap
@@ -40,6 +40,8 @@ set nowrap
 autocmd BufNewFile,BufRead *.md set wrap
 autocmd BufNewFile,BufRead *.md set linebreak
 autocmd BufNewFile,BufRead *.md set nolist
+nmap j gj
+nmap k gk
 
 "FileType support
 filetype plugin indent on
@@ -62,5 +64,10 @@ set wildmenu
 set wildmode=longest,list
 
 "Searching
-autocmd FileType javascript,html,css set incsearch
+set incsearch
+set ignorecase
+set smartcase
 set gdefault
+
+"NERD Tree
+nmap <C-d> :NERDTreeToggle<CR>
