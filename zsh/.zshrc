@@ -14,7 +14,7 @@ export PATH="/usr/local/bin:/bin:/usr/sbin:/usr/bin:/sbin:/usr/X11/bin:/usr/loca
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/git/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
-export PATH="/usr/local/Cellar/python/2.7.3/bin:/usr/local/share/python:$PATH"
+export PATH="/usr/local/Cellar/python/2.7.3/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:.bundle/binstubs:$PATH"
 
 # hub alias
@@ -101,12 +101,13 @@ alias gl="git log --decorate --graph" # show commit history of a branch
 alias glo="git log --decorate --graph --oneline" # show commit history of a branch on one line
 alias gls="git log --decorate --graph --since '1 day ago' --no-merges --author 'Matt Ratleph'" # show commit history of a branch for yesterday
 alias gs="git status -sb" # view the status of your files in the working directory and staging area
-alias gd="git diff" # show diff of all staged or unstaged changes
+alias gd="git diff --ignore-space-at-eol -b -w --ignore-blank-lines" # show diff of all staged or unstaged changes
 alias gt="git tag -a" # tag a point in history as important
 alias ga="git add" # adds file contents to the staging area
 alias grm="git rm" # remove files from the staging area
 alias gc="git commit" # records a snapshot of the staging area
 alias gca="git commit -a" # automatically stage all tracked, modified files before the commit
+alias gcp="git cherry-pick" # cherry-pick a specific commit
 alias gu="git reset HEAD --" # unstage changes that you have staged
 alias grh="git reset --hard" # restore back to HEAD commit
 alias gb="git branch --all" # list your available branches

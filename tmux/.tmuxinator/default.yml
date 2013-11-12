@@ -3,7 +3,7 @@
 
 project_name: Default
 project_root: ~/
-tabs:
+windows:
   - main:
       layout: 64d6,181x55,0,0{90x55,0,0,0,90x55,91,0,1}
       panes:

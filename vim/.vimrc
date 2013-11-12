@@ -32,7 +32,7 @@ set number
 set showmatch
 set ruler
 
-"Don't reset cursor to start of line when moving around.
+"Don't reset cursor to start of line when moving around
 set nostartofline
 
 "Word wrap
