@@ -41,6 +41,7 @@ function theme {
       light)
         osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"Solarized Light\""
         cp ~/Documents/Code/dotfiles/vim/theme/light ~/Documents/Code/dotfiles/vim/.vimrc
+        cp ~/Documents/Code/dotfiles/vim/theme/powerline/light ~/Documents/Code/dotfiles/vim/solarizedDarkLC.vim
         cp ~/Documents/Code/dotfiles/irssi/theme/light ~/.irssi/miromiro.theme
         cp ~/Documents/Code/dotfiles/tmux/theme/light ~/Documents/Code/dotfiles/tmux/.tmux.conf
         tmux source-file ~/.tmux.conf
@@ -51,6 +52,7 @@ function theme {
       dark)
         osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"Solarized Dark\""
         cp ~/Documents/Code/dotfiles/vim/theme/dark ~/Documents/Code/dotfiles/vim/.vimrc
+        cp ~/Documents/Code/dotfiles/vim/theme/powerline/dark ~/Documents/Code/dotfiles/vim/solarizedDarkLC.vim
         cp ~/Documents/Code/dotfiles/irssi/theme/dark ~/.irssi/miromiro.theme
         cp ~/Documents/Code/dotfiles/tmux/theme/dark ~/Documents/Code/dotfiles/tmux/.tmux.conf
         tmux source-file ~/.tmux.conf

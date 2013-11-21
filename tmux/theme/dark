@@ -31,9 +31,9 @@ set-window-option -g window-status-current-fg white
 set status-interval 1
 set -g status-left "#[bg=colour23,fg=white] ⧉ #S #[bg=black,fg=colour23]⮀"
 set -g status-left-length 20
-set -g status-right "#[bg=black,fg=colour240]#[bg=black,fg=colour15] #(memusage) #(/usr/local/bin/battery Discharging; /usr/local/bin/battery Charging) #[bg=black,fg=colour23]⮂#[bg=colour23,fg=white] %e %B %I:%M %p"
-set-window-option -g window-status-format "#[fg=colour253]#I #[fg=colour248]#W"
-set-window-option -g window-status-current-format "#[bg=colour31,fg=black]⮀#[bg=colour31] #[fg=white]#I #[fg=colour15]#W #[bg=black,fg=colour31]⮀"
+set -g status-right "#[bg=black,fg=colour15] #(memusage) #(/usr/local/bin/battery Discharging; /usr/local/bin/battery Charging) #[bg=black,fg=colour23]⮂#[bg=colour23,fg=white] %e %B %I:%M %p"
+set-window-option -g window-status-format "#[fg=colour248]#I #W"
+set-window-option -g window-status-current-format "#[bg=colour31,fg=black]⮀#[bg=colour31] #[fg=white]#I #W #[bg=black,fg=colour31]⮀"
 
 # Smart pane switching with awareness of vim splits
 bind -n C-k run-shell 'tmux-vim-select-pane -U'
