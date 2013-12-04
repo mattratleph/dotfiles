@@ -1,14 +1,14 @@
 # ~/.tmuxinator/default.yml
 # you can make as many tabs as you wish...
 
-project_name: Default
+project_name: Home
 project_root: ~/
 windows:
   - main:
       layout: 64d6,181x55,0,0{90x55,0,0,0,90x55,91,0,1}
       panes:
         - tmux rename-window main
-        - vim
+        - # empty zsh
   - dev:
       layout: 8a25,181x55,0,0[181x41,0,0,2,181x13,0,42{90x13,0,42,4,90x13,91,42,5}]
       panes:
