@@ -83,8 +83,8 @@ alias lsl="ls -AGl" # list all files and folders with permissions
 alias c="clear" # clear the display
 alias s="exec $SHELL" # reload shell
 
-alias show="defaults write com.apple.Finder AppleShowAllFiles TRUE && killall Finder" # show all hidden files in Finder
-alias hide="defaults write com.apple.Finder AppleShowAllFiles FALSE && killall Finder" # hide all hideen files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles 1 && killall Finder" # show all hidden files in Finder
+alias hide="defaults write com.apple.Finder AppleShowAllFiles 0 && killall Finder" # hide all hideen files in Finder
 
 alias iphone="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app" # open iPhone Simulator
 alias android="~/Documents/Code/android/sdk/tools/emulator -avd Nexus-7-4.2 &"
