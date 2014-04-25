@@ -33,43 +33,6 @@ function current_branch() {
   echo ${ref#refs/heads/}
 }
 
-function theme {
-  echo "What theme would you like active?"
-  select opt in light dark exit
-  do
-    case $opt in
-      light)
-        osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"Solarized Light\""
-        cp ~/Documents/Code/dotfiles/vim/theme/light ~/Documents/Code/dotfiles/vim/.vimrc
-        cp ~/Documents/Code/dotfiles/vim/theme/powerline/light ~/Documents/Code/dotfiles/vim/solarizedDarkLC.vim
-        cp ~/Documents/Code/dotfiles/irssi/theme/light ~/.irssi/miromiro.theme
-        cp ~/Documents/Code/dotfiles/tmux/theme/light ~/Documents/Code/dotfiles/tmux/.tmux.conf
-        tmux source-file ~/.tmux.conf
-        cp ~/Documents/Code/dotfiles/zsh/theme/light ~/.oh-my-zsh/themes/custom.zsh-theme
-        exec $SHELL  
-        break
-        ;;
-      dark)
-        osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"Solarized Dark\""
-        cp ~/Documents/Code/dotfiles/vim/theme/dark ~/Documents/Code/dotfiles/vim/.vimrc
-        cp ~/Documents/Code/dotfiles/vim/theme/powerline/dark ~/Documents/Code/dotfiles/vim/solarizedDarkLC.vim
-        cp ~/Documents/Code/dotfiles/irssi/theme/dark ~/.irssi/miromiro.theme
-        cp ~/Documents/Code/dotfiles/tmux/theme/dark ~/Documents/Code/dotfiles/tmux/.tmux.conf
-        tmux source-file ~/.tmux.conf
-        cp ~/Documents/Code/dotfiles/zsh/theme/dark ~/.oh-my-zsh/themes/custom.zsh-theme
-        exec $SHELL
-        break
-        ;;
-      exit)
-        break
-        ;;
-      *)
-        echo "invalid option"
-        ;;
-    esac
-  done
-}
-
 # aliases
 alias tmuxs="mux start default" # start default tmuxinator tmux session
 alias tmuxt="mux open default" # edit default tmuxinator tmus session
@@ -105,7 +68,7 @@ alias gls="git log --decorate --graph --since '1 day ago' --no-merges --author '
 alias gs="git status -sb" # view the status of your files in the working directory and staging area
 alias gd="git diff --ignore-space-at-eol -b -w --ignore-blank-lines" # show diff of all staged or unstaged changes
 alias gt="git tag -a" # tag a point in history as important
-alias ga="git add" # adds file contents to the staging area
+alias ga="git add --all" # adds file contents to the staging area
 alias grm="git rm" # remove files from the staging area
 alias gc="git commit" # records a snapshot of the staging area
 alias gca="git commit -a" # automatically stage all tracked, modified files before the commit
