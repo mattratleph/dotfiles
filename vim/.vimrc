@@ -68,6 +68,3 @@ set incsearch
 set ignorecase
 set smartcase
 set gdefault
-
-"NERD Tree
-nmap <C-d> :NERDTreeToggle<CR>
