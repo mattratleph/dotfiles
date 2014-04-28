@@ -58,8 +58,8 @@ alias vimc="vim ~/.vimrc" # edit vim config in vim
 alias vimt="vim ~/.vim/colors/solarized.vim" # edit vim theme in vim
 alias tmuxc="vim ~/.tmux.conf" # edit tmux config in vim
 alias zshc="vim ~/.zshrc" # edit zsh config in vim
-alias zsht="vim ~/.oh-my-zsh/themes/blinks.zsh-theme" # edit oh-my-zsh theme in vim
-alias installc="vim ~/Documents/Code/private/dotfiles/install.sh" # edit install.sh script in vim
+alias zsht="vim ~/.oh-my-zsh/themes/custom.zsh-theme" # edit oh-my-zsh theme in vim
+alias installc="vim ~/Documents/Code/private/install.sh" # edit install.sh script in vim
 
 alias gi="git init" # initializes a directory as a git repository
 alias gl="git log --decorate --graph" # show commit history of a branch
