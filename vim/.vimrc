@@ -43,6 +43,10 @@ autocmd BufNewFile,BufRead *.md set nolist
 nmap j gj
 nmap k gk
 
+"Spell check
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd FileType gitcommit setlocal spell
+
 "FileType support
 filetype plugin indent on
 
