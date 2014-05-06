@@ -9,13 +9,14 @@ plugins=(brew github heroku)
 # zsh settings
 source $ZSH/oh-my-zsh.sh
 source ~/.localrc
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
 export EDITOR="vim"
 export PATH="/usr/local/bin:/bin:/usr/sbin:/usr/bin:/sbin:/usr/X11/bin:/usr/local/sbin"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/git/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="/usr/local/Cellar/python/2.7.3/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:.bundle/binstubs:$PATH"
 
 # hub alias
 eval "$(hub alias -s)"
@@ -94,6 +95,3 @@ alias gbr="git browse" # open the Github link for the repo in your default brows
 alias hc="heroku create --stack cedar" # create the app on the Cedar stack on Heroku
 alias hp="heroku ps" # check the state of the app's processes on Heroku
 alias hl="heroku logs" # review the Heroku logs for more information
-
-alias markdown="markdown --html4tags" # run the markdown convertor with html4 style tags
-alias lessc="lessc -x" # run the less convertor with the minify switch by default
