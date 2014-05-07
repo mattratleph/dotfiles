@@ -15,8 +15,6 @@ export EDITOR="vim"
 export PATH="/usr/local/bin:/bin:/usr/sbin:/usr/bin:/sbin:/usr/X11/bin:/usr/local/sbin"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/git/bin:$PATH"
-export PATH="/usr/local/share/npm/bin:$PATH"
-export PATH="/usr/local/Cellar/python/2.7.3/bin:$PATH"
 
 # hub alias
 eval "$(hub alias -s)"
