@@ -16,16 +16,6 @@ export PATH="/usr/local/bin:/bin:/usr/sbin:/usr/bin:/sbin:/usr/X11/bin:/usr/loca
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/git/bin:$PATH"
 
-# hub alias
-eval "$(hub alias -s)"
-
-# tmuxinator settings
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-
-# homebrew tab completion
-fpath=($HOME/.zsh/func $fpath)
-typeset -U fpath
-
 # functions
 function current_branch() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
@@ -33,6 +23,8 @@ function current_branch() {
 }
 
 # aliases
+eval "$(hub alias -s)"
+
 alias tmuxs="mux start default" # start default tmuxinator tmux session
 alias tmuxt="mux open default" # edit default tmuxinator tmus session
 
