@@ -5,9 +5,10 @@ set nocompatible
 call pathogen#infect()
 
 "Airline
-let g:airline_theme = "lucius"
+let g:airline_theme = "solarized"
 let g:airline_enable_branch = 1
 let g:airline_enable_syntastic = 1
+let g:airline_powerline_fonts = 1
 let g:airline_left_sep = "⮀"
 let g:airline_left_alt_sep = "⮁"
 let g:airline_right_sep = "⮂"
