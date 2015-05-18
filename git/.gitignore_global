@@ -36,3 +36,5 @@ Thumbs.db
 # Xcode files #
 ###############
 *.xcworkspace
+
+*.pyc
