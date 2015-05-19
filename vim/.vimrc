@@ -1,8 +1,9 @@
 "Make vim more useful
 set nocompatible
 
-"Call pathogen
-call pathogen#infect()
+"Pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
 
 "Airline
 let g:airline_theme = "solarized"
