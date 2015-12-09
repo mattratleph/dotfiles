@@ -1,0 +1,19 @@
+[user]
+	name = Matt Ratleph
+	email = mattratleph@users.noreply.github.com
+
+[color]
+	ui = true
+
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+
+[push]
+	default = simple
+
+[merge]
+	tool = vim
+
+[mergetool "vim"]
+	cmd = vim \"+Gdiff\" $MERGED
