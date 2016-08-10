@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "What would you like to install?"
-select opt in homebrew brews prezto dotfiles bundles ruby gems code sites hooks manual exit
+select opt in homebrew brews prezto dotfiles bundles ruby gems sites hooks manual exit
 do
   case $opt in
     homebrew)
@@ -10,7 +10,7 @@ do
       ;;
     brews)
       brew update
-      brew install chruby dfu-programmer git gnupg hub imagesnap libyaml nmap readline ruby-install ssh-copy-id tor wget
+      brew install chruby dfu-programmer doctl git gnupg hub imagesnap libyaml nmap readline ruby-install ssh-copy-id tor wget
       exec $SHELL
       ;;
     prezto)
@@ -26,14 +26,16 @@ do
     dotfiles)
       mkdir -p ~/Documents/Code & cd ~/Documents/Code
       git clone git@github.com:mattratleph/dotfiles.git
+      git clone git@github.com:mattratleph/tongues.git
+      git clone ssh://seien@mratleph.no-ip.info/home/seien/Documents/Code/private.git
       cd ~
-      rm .gitignore_global .vimrc
+      rm .gitconfig .gitignore_global .vimrc
       rm -r .vim
       mkdir .vim
+      ln -s ~/Documents/Code/dotfiles/git/.gitconfig .gitconfig
       ln -s ~/Documents/Code/dotfiles/git/.gitignore_global .gitignore_global
       ln -s ~/Documents/Code/dotfiles/ruby/.gemrc .gemrc
       ln -s ~/Documents/Code/dotfiles/ruby/.ruby-version .ruby-version
-      ln -s ~/Documents/Code/dotfiles/vim/autoload .vim/autoload
       ln -s ~/Documents/Code/dotfiles/vim/syntax .vim/syntax
       ln -s ~/Documents/Code/dotfiles/vim/.vimrc .vimrc
       exec $SHELL
@@ -42,6 +44,7 @@ do
       mkdir -p ~/.vim/bundle & cd ~/.vim/bundle
       git clone https://github.com/scrooloose/syntastic.git
       git clone https://github.com/bling/vim-airline.git
+      git clone https://github.com/vim-airline/vim-airline-themes.git
       git clone https://github.com/bling/vim-bufferline.git
       git clone https://github.com/tpope/vim-bundler.git
       git clone https://github.com/kchmck/vim-coffee-script.git
@@ -72,20 +75,10 @@ do
       gem install rails sass
       exec $SHELL
       ;;
-    code)
-      mkdir -p ~/Documents/Code & cd ~/Documents/Code
-      git clone git@github.com:mattratleph/tongues.git
-      git clone ssh://seien@mratleph.no-ip.info/home/seien/Documents/Code/private.git
-      cd ~
-      rm .gitconfig .localrc .netrc
-      ln -s ~/Documents/Code/private/.gitconfig .gitconfig
-      ln -s ~/Documents/Code/private/.localrc .localrc
-      ln -s ~/Documents/Code/private/.netrc .netrc
-      exec $SHELL
-      ;;
     sites)
       mkdir ~/Sites & cd ~/Sites
       git clone git@github.com:mattratleph/fullrangefighting.com.git
+      git clone git@github.com:mattratleph/laurentherese.com.git
       git clone git@github.com:mattratleph/mattratleph.github.com.git
       git clone git@github.com:mattratleph/umberlas.com.git
       ;;
@@ -94,6 +87,7 @@ do
       cp ~/Documents/Code/dotfiles/git/post-commit ~/Documents/Code/dotfiles/.git/hooks/
       cp ~/Documents/Code/dotfiles/git/post-commit ~/Documents/Code/private/.git/hooks/
       cp ~/Documents/Code/dotfiles/git/post-commit ~/Sites/fullrangefighting.com/.git/hooks/
+      cp ~/Documents/Code/dotfiles/git/post-commit ~/Sites/laurentherese.com/.git/hooks/
       cp ~/Documents/Code/dotfiles/git/post-commit ~/Sites/mattratleph.github.com/.git/hooks/
       cp ~/Documents/Code/dotfiles/git/post-commit ~/Sites/umberlas.com/.git/hooks/
       ;;
