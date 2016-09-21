@@ -65,6 +65,7 @@ colorscheme solarized
 set cursorline
 set laststatus=2
 set number
+set relativenumber
 set showmatch
 set ruler
 

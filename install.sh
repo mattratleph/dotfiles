@@ -24,20 +24,20 @@ do
       exec $SHELL
       ;;
     dotfiles)
-      mkdir -p ~/Documents/Code & cd ~/Documents/Code
+      mkdir -p ~/Code & cd ~/Code
       git clone git@github.com:mattratleph/dotfiles.git
       git clone git@github.com:mattratleph/tongues.git
-      git clone ssh://seien@mratleph.no-ip.info/home/seien/Documents/Code/private.git
+      git clone ssh://seien@mratleph.no-ip.info/home/seien/Code/private.git
       cd ~
       rm .gitconfig .gitignore_global .vimrc
       rm -r .vim
       mkdir .vim
-      ln -s ~/Documents/Code/dotfiles/git/.gitconfig .gitconfig
-      ln -s ~/Documents/Code/dotfiles/git/.gitignore_global .gitignore_global
-      ln -s ~/Documents/Code/dotfiles/ruby/.gemrc .gemrc
-      ln -s ~/Documents/Code/dotfiles/ruby/.ruby-version .ruby-version
-      ln -s ~/Documents/Code/dotfiles/vim/syntax .vim/syntax
-      ln -s ~/Documents/Code/dotfiles/vim/.vimrc .vimrc
+      ln -s ~/Code/dotfiles/git/.gitconfig .gitconfig
+      ln -s ~/Code/dotfiles/git/.gitignore_global .gitignore_global
+      ln -s ~/Code/dotfiles/ruby/.gemrc .gemrc
+      ln -s ~/Code/dotfiles/ruby/.ruby-version .ruby-version
+      ln -s ~/Code/dotfiles/vim/syntax .vim/syntax
+      ln -s ~/Code/dotfiles/vim/.vimrc .vimrc
       exec $SHELL
       ;;
     bundles)
@@ -57,7 +57,6 @@ do
       git clone https://github.com/groenewege/vim-less.git
       git clone https://github.com/tpope/vim-markdown.git
       git clone https://github.com/mustache/vim-mustache-handlebars.git
-      git clone https://github.com/jeffkreeftmeijer/vim-numbertoggle.git
       git clone https://github.com/tpope/vim-pathogen.git
       git clone https://github.com/tpope/vim-rails.git
       git clone https://github.com/tpope/vim-rhubarb.git
@@ -84,12 +83,12 @@ do
       ;;
     hooks)
       mkdir ~/.gitshots
-      cp ~/Documents/Code/dotfiles/git/post-commit ~/Documents/Code/dotfiles/.git/hooks/
-      cp ~/Documents/Code/dotfiles/git/post-commit ~/Documents/Code/private/.git/hooks/
-      cp ~/Documents/Code/dotfiles/git/post-commit ~/Sites/fullrangefighting.com/.git/hooks/
-      cp ~/Documents/Code/dotfiles/git/post-commit ~/Sites/laurentherese.com/.git/hooks/
-      cp ~/Documents/Code/dotfiles/git/post-commit ~/Sites/mattratleph.github.com/.git/hooks/
-      cp ~/Documents/Code/dotfiles/git/post-commit ~/Sites/umberlas.com/.git/hooks/
+      cp ~/Code/dotfiles/git/post-commit ~/Code/dotfiles/.git/hooks/
+      cp ~/Code/dotfiles/git/post-commit ~/Code/private/.git/hooks/
+      cp ~/Code/dotfiles/git/post-commit ~/Sites/fullrangefighting.com/.git/hooks/
+      cp ~/Code/dotfiles/git/post-commit ~/Sites/laurentherese.com/.git/hooks/
+      cp ~/Code/dotfiles/git/post-commit ~/Sites/mattratleph.github.com/.git/hooks/
+      cp ~/Code/dotfiles/git/post-commit ~/Sites/umberlas.com/.git/hooks/
       ;;
     manual)
       echo "VirtualBox: https://www.virtualbox.org/wiki/Downloads \n"
