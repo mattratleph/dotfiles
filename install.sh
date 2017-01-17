@@ -10,7 +10,10 @@ do
       ;;
     brews)
       brew update
-      brew install chruby dfu-programmer doctl git gnupg hub imagesnap libyaml nmap readline ruby-install ssh-copy-id tor wget
+      brew tap homebrew/bundle
+      brew tap caskroom/cask
+      brew install chruby dfu-programmer doctl git gnupg hub imagesnap libyaml mas nmap readline ruby-install ssh-copy-id tor wget
+      brew cask install android-studio firefox google-chrome handbrake hipchat opera sketch transmission virtualbox
       exec $SHELL
       ;;
     prezto)
@@ -91,12 +94,10 @@ do
       cp ~/Code/dotfiles/git/post-commit ~/Sites/umberlas.com/.git/hooks/
       ;;
     manual)
-      echo "VirtualBox: https://www.virtualbox.org/wiki/Downloads \n"
       echo "IE VMs: http://modern.ie/en-us/virtualization-tools \n"
       echo "Vagrant: http://www.vagrantup.com/downloads.html \n"
       echo "Heroku: https://www.heroku.com/ \n"
       echo "Xcode: https://developer.apple.com/xcode/ \n"
-      echo "Android SDK: http://developer.android.com/tools/"
       ;;
     exit)
       break
