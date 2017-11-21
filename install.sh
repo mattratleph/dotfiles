@@ -5,7 +5,7 @@ select opt in homebrew brews prezto dotfiles bundles ruby gems sites hooks manua
 do
   case $opt in
     homebrew)
-      ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
       exec $SHELL
       ;;
     brews)
@@ -13,7 +13,7 @@ do
       brew tap homebrew/bundle
       brew tap caskroom/cask
       brew install chruby dfu-programmer doctl git gnupg hub imagesnap libyaml mas nmap readline ruby-install ssh-copy-id tor wget
-      brew cask install android-studio firefox google-chrome handbrake hipchat opera sketch transmission virtualbox
+      brew cask install ableton-live-suite android-studio battle-net discord firefox google-chrome handbrake hipchat minecraft opera sketch steam transmission twitch vagrant virtualbox
       exec $SHELL
       ;;
     prezto)
@@ -57,7 +57,6 @@ do
       git clone https://github.com/tpope/vim-fugitive.git
       git clone https://github.com/tpope/vim-haml.git
       git clone https://github.com/tpope/vim-heroku.git
-      git clone https://github.com/groenewege/vim-less.git
       git clone https://github.com/tpope/vim-markdown.git
       git clone https://github.com/mustache/vim-mustache-handlebars.git
       git clone https://github.com/tpope/vim-pathogen.git
@@ -95,9 +94,7 @@ do
       ;;
     manual)
       echo "IE VMs: http://modern.ie/en-us/virtualization-tools \n"
-      echo "Vagrant: http://www.vagrantup.com/downloads.html \n"
       echo "Heroku: https://www.heroku.com/ \n"
-      echo "Xcode: https://developer.apple.com/xcode/ \n"
       ;;
     exit)
       break
