@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "What would you like to install?"
-select opt in homebrew brews prezto dotfiles bundles ruby gems sites hooks manual exit
+select opt in homebrew brews prezto dotfiles vim ruby gems sites manual exit
 do
   case $opt in
     homebrew)
@@ -10,10 +10,7 @@ do
       ;;
     brews)
       brew update
-      brew tap homebrew/bundle
-      brew tap caskroom/cask
-      brew install chruby dfu-programmer doctl git gnupg hub imagesnap libyaml mas nmap readline ruby-install ssh-copy-id tor wget
-      brew cask install ableton-live-suite android-studio battle-net discord firefox google-chrome handbrake hipchat minecraft opera sketch steam transmission twitch vagrant virtualbox
+      brew bundle
       exec $SHELL
       ;;
     prezto)
@@ -27,10 +24,10 @@ do
       exec $SHELL
       ;;
     dotfiles)
-      mkdir -p ~/Code & cd ~/Code
+      mkdir -p ~/Code
+      cd ~/Code
       git clone git@github.com:mattratleph/dotfiles.git
       git clone git@github.com:mattratleph/tongues.git
-      git clone ssh://seien@mratleph.no-ip.info/home/seien/Code/private.git
       cd ~
       rm .gitconfig .gitignore_global .vimrc
       rm -r .vim
@@ -38,13 +35,16 @@ do
       ln -s ~/Code/dotfiles/git/.gitconfig .gitconfig
       ln -s ~/Code/dotfiles/git/.gitignore_global .gitignore_global
       ln -s ~/Code/dotfiles/ruby/.gemrc .gemrc
-      ln -s ~/Code/dotfiles/ruby/.ruby-version .ruby-version
       ln -s ~/Code/dotfiles/vim/syntax .vim/syntax
       ln -s ~/Code/dotfiles/vim/.vimrc .vimrc
       exec $SHELL
       ;;
-    bundles)
-      mkdir -p ~/.vim/bundle & cd ~/.vim/bundle
+    vim)
+      mkdir -p ~/.vim/backups
+      mkdir -p ~/.vim/swaps
+      mkdir -p ~/.vim/undo
+      mkdir -p ~/.vim/bundle
+      cd ~/.vim/bundle
       git clone https://github.com/scrooloose/syntastic.git
       git clone https://github.com/bling/vim-airline.git
       git clone https://github.com/vim-airline/vim-airline-themes.git
@@ -73,27 +73,19 @@ do
     gems)
       gem update --system
       gem update
-      gem install rails sass
+      gem install rails
       exec $SHELL
       ;;
     sites)
-      mkdir ~/Sites & cd ~/Sites
+      mkdir ~/Sites
+      cd ~/Sites
       git clone git@github.com:mattratleph/fullrangefighting.com.git
       git clone git@github.com:mattratleph/laurentherese.com.git
       git clone git@github.com:mattratleph/mattratleph.github.com.git
       git clone git@github.com:mattratleph/umberlas.com.git
       ;;
-    hooks)
-      mkdir ~/.gitshots
-      cp ~/Code/dotfiles/git/post-commit ~/Code/dotfiles/.git/hooks/
-      cp ~/Code/dotfiles/git/post-commit ~/Code/private/.git/hooks/
-      cp ~/Code/dotfiles/git/post-commit ~/Sites/fullrangefighting.com/.git/hooks/
-      cp ~/Code/dotfiles/git/post-commit ~/Sites/laurentherese.com/.git/hooks/
-      cp ~/Code/dotfiles/git/post-commit ~/Sites/mattratleph.github.com/.git/hooks/
-      cp ~/Code/dotfiles/git/post-commit ~/Sites/umberlas.com/.git/hooks/
-      ;;
     manual)
-      echo "IE VMs: http://modern.ie/en-us/virtualization-tools \n"
+      echo "IE VMs: https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/ \n"
       echo "Heroku: https://www.heroku.com/ \n"
       ;;
     exit)
