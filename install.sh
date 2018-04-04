@@ -27,7 +27,6 @@ do
       mkdir -p ~/Code
       cd ~/Code
       git clone git@github.com:mattratleph/dotfiles.git
-      git clone git@github.com:mattratleph/tongues.git
       cd ~
       rm .gitconfig .gitignore_global .vimrc
       rm -r .vim
@@ -37,12 +36,13 @@ do
       ln -s ~/Code/dotfiles/ruby/.gemrc .gemrc
       ln -s ~/Code/dotfiles/vim/syntax .vim/syntax
       ln -s ~/Code/dotfiles/vim/.vimrc .vimrc
+      cd .vim
+      mkdir backups
+      mkdir swaps
+      mkdir undo
       exec $SHELL
       ;;
     vim)
-      mkdir -p ~/.vim/backups
-      mkdir -p ~/.vim/swaps
-      mkdir -p ~/.vim/undo
       mkdir -p ~/.vim/bundle
       cd ~/.vim/bundle
       git clone https://github.com/scrooloose/syntastic.git
@@ -58,7 +58,6 @@ do
       git clone https://github.com/tpope/vim-haml.git
       git clone https://github.com/tpope/vim-heroku.git
       git clone https://github.com/tpope/vim-markdown.git
-      git clone https://github.com/mustache/vim-mustache-handlebars.git
       git clone https://github.com/tpope/vim-pathogen.git
       git clone https://github.com/tpope/vim-rails.git
       git clone https://github.com/tpope/vim-rhubarb.git
@@ -77,7 +76,7 @@ do
       exec $SHELL
       ;;
     sites)
-      mkdir ~/Sites
+      mkdir -p ~/Sites
       cd ~/Sites
       git clone git@github.com:mattratleph/fullrangefighting.com.git
       git clone git@github.com:mattratleph/laurentherese.com.git
