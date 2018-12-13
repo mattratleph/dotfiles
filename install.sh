@@ -85,7 +85,6 @@ do
       ;;
     manual)
       echo "IE VMs: https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/ \n"
-      echo "Heroku: https://www.heroku.com/ \n"
       ;;
     exit)
       break
