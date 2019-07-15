@@ -61,6 +61,7 @@ do
       git clone https://github.com/tpope/vim-pathogen.git
       git clone https://github.com/tpope/vim-rails.git
       git clone https://github.com/tpope/vim-rhubarb.git
+      git clone https://github.com/tpope/vim-surround.git
       git clone https://github.com/tpope/vim-vinegar.git
       exec $SHELL
       ;;
