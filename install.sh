@@ -34,7 +34,6 @@ do
       ln -s ~/Code/dotfiles/git/.gitconfig .gitconfig
       ln -s ~/Code/dotfiles/git/.gitignore_global .gitignore_global
       ln -s ~/Code/dotfiles/ruby/.gemrc .gemrc
-      ln -s ~/Code/dotfiles/vim/syntax .vim/syntax
       ln -s ~/Code/dotfiles/vim/.vimrc .vimrc
       cd .vim
       mkdir backups
@@ -45,8 +44,8 @@ do
     vim)
       mkdir -p ~/.vim/bundle
       cd ~/.vim/bundle
-      git clone https://github.com/scrooloose/syntastic.git
-      git clone https://github.com/bling/vim-airline.git
+      git clone https://github.com/vim-syntastic/syntastic.git
+      git clone https://github.com/vim-airline/vim-airline.git
       git clone https://github.com/vim-airline/vim-airline-themes.git
       git clone https://github.com/bling/vim-bufferline.git
       git clone https://github.com/tpope/vim-bundler.git
