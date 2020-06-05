@@ -9,11 +9,14 @@
 	excludesfile = ~/.gitignore_global
 	editor = vim
 
-[push]
-	default = simple
-
 [merge]
 	tool = vim
 
 [mergetool "vim"]
 	cmd = vim \"+Gdiff\" $MERGED
+
+[pull]
+	rebase = false
+
+[push]
+	default = simple
